@@ -56,10 +56,9 @@ void insertion_sort_list(listint_t **list)
 		{
 			ptr1 = swap(&ptr1, &ptr2);
 			ptr2 = ptr1->prev;
-
 			if (ptr2 == NULL)
 				*list = ptr1;
-				print_list(*list);
+			print_list(*list);
 
 			while (ptr2 != NULL && ptr1->n < ptr2->n)
 			{
@@ -67,7 +66,7 @@ void insertion_sort_list(listint_t **list)
 				ptr2 = ptr1->prev;
 				if (ptr2 == NULL)
 					*list = ptr1;
-					print_list(*list);
+				print_list(*list);
 			}
 		}
 		else
